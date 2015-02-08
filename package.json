@@ -4,8 +4,12 @@
   "description": "Studying how one would code the path module from node core in ES6 (inspired by substack/path-browserify) ",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "coverage": "isparta cover --report html _mocha"
+    "test": "6to5-node node_modules/.bin/_mocha $npm_package_config_MOCHA_OPTS",
+    "coverage": "6to5-node node_modules/.bin/isparta cover $npm_package_config_ISPARTA_OPTS node_modules/.bin/_mocha -- $npm_package_config_MOCHA_OPTS"
+  },
+  "config" : {
+    "MOCHA_OPTS" : "--reporter dot",
+    "ISPARTA_OPTS" : "--report html"
   },
   "repository": {
     "type": "git",
