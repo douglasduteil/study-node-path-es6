@@ -1,6 +1,6 @@
 {
   "name": "study-node-path-es6",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Studying how one would code the path module from node core in ES6 (inspired by substack/path-browserify) ",
   "main": "index.js",
   "scripts": {
