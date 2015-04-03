@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "Studying how one would code the path module from node core in ES6 (inspired by substack/path-browserify) ",
   "main": "index.js",
-  "scripts": {
-    "test": "babel-node node_modules/.bin/_mocha $npm_package_config_MOCHA_OPTS",
-    "coverage": "babel-node node_modules/.bin/isparta cover $npm_package_config_ISPARTA_OPTS node_modules/.bin/_mocha -- $npm_package_config_MOCHA_OPTS"
-  },
-  "config": {
-    "MOCHA_OPTS": "--reporter dot",
-    "ISPARTA_OPTS": "--report html"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/douglasduteil/study-node-path-es6"
@@ -30,9 +22,16 @@
   },
   "homepage": "https://github.com/douglasduteil/study-node-path-es6",
   "devDependencies": {
-    "babel": "^4.0.1",
-    "chai": "^1.10.0",
-    "isparta": "^2.0.0",
-    "mocha": "^2.1.0"
+    "babel": "^5.0.4",
+    "chai": "^2.2.0",
+    "isparta": "^3.0.0",
+    "mocha": "^2.2.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "babel-node node_modules/.bin/isparta cover $npm_package_config_ISPARTA_OPTS node_modules/.bin/_mocha"
+  },
+  "config": {
+    "ISPARTA_OPTS": "--report html"
   }
 }

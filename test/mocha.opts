@@ -1,0 +1,2 @@
+--reporter dot
+--compilers babel:babel/register
