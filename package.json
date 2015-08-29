@@ -28,8 +28,8 @@
     "mocha": "^2.2.1"
   },
   "scripts": {
-    "test": "mocha",
-    "coverage": "babel-node node_modules/.bin/isparta cover $npm_package_config_ISPARTA_OPTS node_modules/.bin/_mocha"
+    "test": "make test",
+    "coverage": "make test-cov"
   },
   "config": {
     "ISPARTA_OPTS": "--report html"
