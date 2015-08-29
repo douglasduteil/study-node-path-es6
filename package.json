@@ -24,7 +24,8 @@
   "devDependencies": {
     "babel": "^5.0.4",
     "chai": "^3.2.0",
-    "isparta": "^3.0.0",
+    "istanbul": "douglasduteil/istanbul#dd-source-map",
+    "istanbul-babel": "^1.0.1",
     "mocha": "^2.2.1"
   },
   "scripts": {
