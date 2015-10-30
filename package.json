@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/douglasduteil/study-node-path-es6",
   "devDependencies": {
-    "babel": "5.8.34",
+    "babel": "6.0.14",
     "chai": "3.4.1",
     "isparta": "3.0.0",
     "mocha": "2.3.3"
