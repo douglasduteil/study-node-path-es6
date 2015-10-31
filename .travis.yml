@@ -1,8 +1,16 @@
 ---
 language: node_js
 node_js:
-- '0.12'
-- '0.11'
-- 'io.js'
+- "stable"
+env:
+  global:
+    - COVERAGE=false
+matrix:
+  include:
+    - node_js: "stable"
+      env: COVERAGE=true
+before_install:
+  - npm install codecov.io
 after_script:
-- 'npm run coverage'
+ - "[ $COVERAGE == false ] || npm run coverage"
+ - "[ $COVERAGE == false ] || cat ./coverage/lcov.info | ./node_modules/.bin/codecov"
