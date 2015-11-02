@@ -24,7 +24,7 @@
   "devDependencies": {
     "babel": "5.8.29",
     "chai": "3.4.0",
-    "isparta": "3.0.0",
+    "isparta": "3.2.0",
     "mocha": "2.3.3"
   },
   "scripts": {
