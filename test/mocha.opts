@@ -1,2 +1,2 @@
 --reporter dot
---compilers babel:babel/register
+--compilers js:babel-core/register
