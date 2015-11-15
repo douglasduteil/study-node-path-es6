@@ -12,4 +12,4 @@ test:
 
 test-cov:
 	rm -rf coverage
-	$(ISPARTA_CMD) --include-all-sources --report html $(MOCHA_CMD) -- test
+	$(ISPARTA_CMD) --include-all-sources --report lcov --report html $(MOCHA_CMD) -- test

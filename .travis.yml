@@ -12,7 +12,7 @@ matrix:
     - node_js: "stable"
       env: COVERAGE=true
 before_install:
-  - "[ $COVERAGE == false ] || npm install coveralls"
+  - "[ $COVERAGE == false ] || npm install codecov.io"
 after_script:
-  - "[ $COVERAGE == false ] || ./node_modules/.bin/isparta cover ./node_modules/.bin/mocha --report lcovonly -- -R spec"
-  - "[ $COVERAGE == false ] || cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  - "[ $COVERAGE == false ] || npm run coverage"
+  - "[ $COVERAGE == false ] || cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js && rm -rf ./coverage"
