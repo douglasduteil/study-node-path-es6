@@ -2,9 +2,8 @@ MAKEFLAGS = -j1
 
 BIN = node_modules/.bin
 
-NODE = $(BIN)/babel-node
 ISPARTA_CMD = $(BIN)/isparta cover
-MOCHA_CMD = $(BIN)/_mocha
+MOCHA_CMD = node_modules/mocha/bin/_mocha
 
 .PHONY: test test-cov
 
@@ -13,4 +12,4 @@ test:
 
 test-cov:
 	rm -rf coverage
-	$(NODE) $(ISPARTA_CMD) --report html $(MOCHA_CMD) -- test
+	$(ISPARTA_CMD) --include-all-sources --report html $(MOCHA_CMD) -- test

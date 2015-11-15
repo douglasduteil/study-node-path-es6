@@ -30,6 +30,6 @@
   },
   "scripts": {
     "test": "make test",
-    "coverage": "isparta cover index.js --report html"
+    "coverage": "make test-cov"
   }
 }
